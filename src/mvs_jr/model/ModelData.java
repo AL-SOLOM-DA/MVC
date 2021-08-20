@@ -1,6 +1,6 @@
-package net.company;
+package mvs_jr.model;
 
-import bean.User;
+import mvs_jr.bean.User;
 
 import java.util.List;
 

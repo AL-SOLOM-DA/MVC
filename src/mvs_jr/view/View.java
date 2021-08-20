@@ -1,7 +1,7 @@
-package view;
+package mvs_jr.view;
 
-import controller.Controller;
-import net.company.ModelData;
+import mvs_jr.controller.Controller;
+import mvs_jr.model.ModelData;
 
 public interface View {
     void refresh(ModelData modelData);

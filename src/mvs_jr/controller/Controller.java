@@ -1,7 +1,7 @@
-package controller;
+package mvs_jr.controller;
 
-import net.company.Model;
-import view.UsersView;
+import mvs_jr.model.Model;
+import mvs_jr.view.UsersView;
 
 public class Controller {
     private Model model;
