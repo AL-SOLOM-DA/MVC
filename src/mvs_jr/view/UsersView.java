@@ -10,7 +10,11 @@ public class UsersView implements View {
 
     @Override
     public void refresh(ModelData modelData) {
-        System.out.println("All users:");
+        if(modelData.isDisplayDeletedUserList()){
+            System.out.println("All deleted users:");
+        } else{
+            System.out.println("All users:");
+        }
         for (User elem : modelData.getUsers()) {
             System.out.println("\t"+ elem);
         }
@@ -24,5 +28,10 @@ public class UsersView implements View {
     public void fireEventShowAllUsers(){
         controller.onShowAllUsers();
     }
+
+    public void fireEventShowDeletedUsers(){
+        controller.onShowAllDeletedUserss();
+    }
+
 
 }

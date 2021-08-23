@@ -1,6 +1,6 @@
 package mvs_jr.bean;
 
-public class User {
+public class User implements Cloneable {
     private String name;
     private final long id;
     private int level;
