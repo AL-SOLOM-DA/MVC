@@ -10,13 +10,19 @@ public class EditUserView implements View{
     @Override
     public void refresh(ModelData modelData) {
         System.out.println("User to be edited:");
-        for (User elem : modelData.getUsers()) {
-            System.out.println("\t"+ elem);
-        }
+        System.out.println("\t" + modelData.getActiveUser());
         System.out.println("==========================");
     }
 
     public void setController(Controller controller) {
         this.controller = controller;
+    }
+
+    public void fireEventUserDeleted(long id){
+        controller.onUserDeleted(id);
+    }
+
+    public void fireEventUserChanged(String name, long id, int level){
+        controller.onUserChange(name, id, level);
     }
 }
